@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorytmy różne</title>
+</head>
+<body>
+   <h1>Algorytmy</h1> 
+   <ul>
+         <li><a href="index.html">Strona główna</a></li>
+         <li><a href="1.html">Silnia</a></li>
+         <li><a href="2.html">Dodawanie do 100</a></li>
+    </ul>
+	<img src="silnia.png">
+    Podaj liczbę <input type="number" id="a">
+    <button id="button">Oblicz silnię</button>
+    <p id="wynik"></p>
+    <script>
+        var przycisk = document.getElementById("button");
+        //Użycie funkcji anonimowej (bez nazwy)
+        przycisk.addEventListener("click", function() {
+        
+            let a=document.getElementById("a").value;
+            let wynik = document.getElementById("wynik");
+            let s=1;
+            if(a>=0)
+                {
+                 for ( var i=1; i<=a ; i++)
+                 s=s*i;
+                wynik.innerHTML=a+"!="+s; 
+                }
+            else
+            wynik.innerText="Podaj liczbę naturalną";
+        });
+        
+    </script>
+</body>
+</html>
